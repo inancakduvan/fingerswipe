@@ -8,7 +8,24 @@
 </head>
 <body>
     
-    
+    <div id="fingerswipe">Please swipe your finger.</div>
+
     <script src="fingerswipe.js"></script>
+    <script>
+        const target = window;
+
+        function swipeLeft() {
+            alert("left");
+        }
+
+        function swipeRight() {
+            alert("right");
+        }
+
+        fingerswipe("horizontal", target, {
+            left: swipeLeft,
+            right: swipeRight
+        });
+    </script>
 </body>
 </html>
