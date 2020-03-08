@@ -7,8 +7,10 @@
 # How to use
 
 import Fingerswipe JS at end of your body tag.
+
+<h3>CDN</h3>
 <pre>
-  <script src='fingerswipe.js'></script>
+  <script src='https://res.cloudinary.com/dd2ownqt9/raw/upload/v1583681710/fingerswipe_qhcnq7.js'></script>
 </pre>
 
 <h3>Parameters</h3>
