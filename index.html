@@ -5,26 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finger Swipe</title>
     <link rel="stylesheet" href="fingerswipe.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600&display=swap&subset=latin-ext" rel="stylesheet">
 </head>
 <body>
-    
-    <div id="fingerswipe">Please swipe your finger.</div>
 
+    <div id="app-header">Fingerswipe JS</div>
+    
+    <div id="app-grid">
+        <div id="horizontal-area">
+            <div class="area-inner" id="horizontal-area-inner">Swipe your finger horizontally</div>
+        </div>
+
+        <div id="vertical-area">
+            <div class="area-inner" id="vertical-area-inner">Swipe your finger vertically</div>
+        </div>
+    </div>
+
+    <!-- Import Fingerswipe JS-->
     <script src="fingerswipe.js"></script>
     <script>
-        const target = window;
+        // Target areas you want to run function.
+        const targetHorizontalArea = document.getElementById("horizontal-area");
+        const targetVerticalArea = document.getElementById("vertical-area");
 
+        // Code your functions you will run on swipe!
         function swipeLeft() {
-            alert("left");
+            document.getElementById("horizontal-area-inner").innerHTML = "You swiped left!"
         }
 
         function swipeRight() {
-            alert("right");
+            document.getElementById("horizontal-area-inner").innerHTML = "You swiped right!"
         }
 
-        fingerswipe("horizontal", target, {
+        function swipeUp() {
+            document.getElementById("vertical-area-inner").innerHTML = "You swiped up!"
+        }
+
+        function swipeDown() {
+            document.getElementById("vertical-area-inner").innerHTML = "You swiped down!"
+        }
+
+        // Initialize fingerwipe function with 3 parameters: (direction, target, functions object)
+        fingerswipe("horizontal", targetHorizontalArea, {
             left: swipeLeft,
             right: swipeRight
+        });
+
+        fingerswipe("vertical", targetVerticalArea, {
+            up: swipeUp,
+            down: swipeDown
         });
     </script>
 </body>
