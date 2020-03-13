@@ -23,7 +23,7 @@ import Fingerswipe JS at end of your body tag.
   
   <tr>
     <td>horizontal / vertical</td>
-    <td>targetted div id you will swipe on</td>
+    <td>targetted div you will swipe on</td>
     <td>Object including your functions which will be triggered</td>
   </tr>
 </table>
@@ -56,7 +56,7 @@ import Fingerswipe JS at end of your body tag.
         }
         
 
-        // Initialize fingerwipe function with 3 parameters: (direction, target, functions object)
+        // Initialize fingerswipe function with 3 parameters: (direction, target, functions object)
         
         fingerswipe("horizontal", targetHorizontalArea, {
             left: swipeLeft,
